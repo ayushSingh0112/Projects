@@ -30,12 +30,20 @@ class ToDo:
         print("Enter 1 for completed and 0 for pending")
         print("Task (current status) : (new status)")
         for todos in self.task_status.keys():
-            print(f"{todos} ({self.task_status[todos]}) : ", end="")
-            status = int(input())
-            if status == 1:
-                self.task_status[todos] = "completed"
-            elif status == 0:
-                self.task_status[todos] = "pending"
+            while True:
+                print(f"{todos} ({self.task_status[todos]}) : ", end="")
+                try:
+                    status = int(input())
+                    if status == 1:
+                        self.task_status[todos] = "completed"
+                        break
+                    elif status == 0:
+                        self.task_status[todos] = "pending"
+                        break
+                    else:
+                        print("Invalid input. Status remains unchanged.")
+                except ValueError:
+                    print("Please enter either 0 or 1.")
         print("Status Updated Successfully.")
 
     def save_tasks(self):
