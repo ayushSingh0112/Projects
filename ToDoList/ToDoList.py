@@ -10,8 +10,8 @@ class ToDo:
 
     def load_list(self):
         """Load JSON file"""
-        if not os.path.exists("E:\\Programming\\Python\\JSON\\ToDo.json"):
-            with open("E:\\Programming\\Python\\JSON\\ToDo.json", 'w') as f:
+        if not os.path.exists(self.file_path):
+            with open(self.file_path, 'w') as f:
                 f.write('{}')
         with open(self.file_path, 'r') as file:
             self.task_status = json.load(file)
@@ -141,6 +141,5 @@ class ToDo:
                     print("Invalid Input") 
 
 print("Welcome to My ToDo List Application")
-file_path = "E:/Programming/Python/JSON/ToDo.json"
+file_path = ""
 todo_list = ToDo(file_path)
-todo_list.work()
