@@ -9,4 +9,4 @@ Hello everyone, this is a basic todo list completely made by me as my first proj
 5. Save and exit.<br>
 6. Exit without saving.<br>
 
-<h1>Thankyou for visiting.<h1>
+<h3>Thankyou for visiting.<h3>
